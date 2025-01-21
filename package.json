@@ -13,6 +13,7 @@
     "@solidjs/router": "^0.15.3",
     "@solidjs/start": "^1.0.11",
     "@vinxi/plugin-mdx": "^3.7.2",
+    "lucide-solid": "^0.473.0",
     "remark-frontmatter": "^5.0.0",
     "solid-js": "^1.9.4",
     "solid-mdx": "^0.0.7",

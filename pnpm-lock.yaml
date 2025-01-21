@@ -26,6 +26,9 @@ importers:
       '@vinxi/plugin-mdx':
         specifier: ^3.7.2
         version: 3.7.2(@mdx-js/mdx@2.3.0)
+      lucide-solid:
+        specifier: ^0.473.0
+        version: 0.473.0(solid-js@1.9.4)
       remark-frontmatter:
         specifier: ^5.0.0
         version: 5.0.0
@@ -2174,6 +2177,11 @@ packages:
 
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
+
+  lucide-solid@0.473.0:
+    resolution: {integrity: sha512-AcmBZle73Z9HOtKI3uXBJ6aRem1kVE4XHuiVrhrIToi8jLlycBewUel6ToBUe2s/5mBtRfMe7ZeVYy6PMqyuOA==}
+    peerDependencies:
+      solid-js: ^1.4.7
 
   magic-string@0.30.17:
     resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
@@ -5408,6 +5416,10 @@ snapshots:
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
+
+  lucide-solid@0.473.0(solid-js@1.9.4):
+    dependencies:
+      solid-js: 1.9.4
 
   magic-string@0.30.17:
     dependencies:
