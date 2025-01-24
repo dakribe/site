@@ -1,9 +1,0 @@
-@import "@fontsource/geist-mono";
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body {
-  @apply bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100 mx-auto max-w-3xl font-mono selection:bg-indigo-600;
-}
