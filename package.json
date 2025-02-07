@@ -1,35 +1,20 @@
 {
-  "name": "example-with-mdx",
+  "name": "",
   "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "vinxi dev",
-    "build": "vinxi build",
-    "start": "vinxi start"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@fontsource/geist-mono": "^5.1.1",
-    "@mdx-js/mdx": "^2.3.0",
-    "@solidjs/meta": "^0.29.4",
-    "@solidjs/router": "^0.15.3",
-    "@solidjs/start": "^1.0.11",
-    "@vinxi/plugin-mdx": "^3.7.2",
-    "lucide-solid": "^0.473.0",
-    "remark-frontmatter": "^5.0.0",
-    "solid-js": "^1.9.4",
-    "solid-mdx": "^0.0.7",
-    "vinxi": "^0.4.3"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "devDependencies": {
-    "@shikijs/rehype": "^1.29.1",
-    "@tailwindcss/typography": "^0.5.16",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.5.1",
-    "tailwindcss": "^3.4.17",
-    "to-vfile": "^8.0.0",
-    "vfile-matter": "^5.0.0",
-    "vite": "^5.4.13"
+    "@astrojs/vercel": "^8.0.6",
+    "@tailwindcss/vite": "^4.0.4",
+    "astro": "^5.2.5",
+    "prettier": "^3.4.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^4.0.4"
   }
 }

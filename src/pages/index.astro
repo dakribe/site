@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog");
+---
+
+<Layout title="dakribe">
+  <h1 class="text-brand-500 text-xl font-bold">dakribe</h1>
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus
+    impedit, veniam velit amet mollitia qui ipsa dolorem. Incidunt repellendus
+    harum exercitationem rerum quibusdam, possimus neque, quos veniam eligendi
+    numquam velit?
+  </p>
+  <ul>
+    {
+      posts.map((post) => (
+        <li>
+          <a href={`/posts/${post.data.slug}`}>{post.data.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>
