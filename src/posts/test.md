@@ -4,3 +4,7 @@ slug: test-post
 ---
 
 # Test
+
+```lua
+print("Hello world")
+```
