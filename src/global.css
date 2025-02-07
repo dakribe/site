@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@theme {
+  --color-brand-500: #3a6071;
+  --color-background: #f9f9f9;
+  --color-foreground: #212c33;
+}
+
+body {
+  @apply text-foreground bg-background mx-auto max-w-3xl;
+}
