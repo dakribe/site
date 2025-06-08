@@ -1,0 +1,20 @@
+---
+import { render } from "astro:content"
+import { getEntry } from "astro:content"
+import { undefined } from "astro:schema"
+
+const {id} = Astro.props
+if (id === undefined) {
+  return Astro.redirect("/404")
+}
+
+const post = await getEntry("blog", id)
+if (post === undefined) {
+  return Astro.redirect("/404")
+}
+
+const {Content} = await render(post)
+---
+
+<h1>{post?.data.title}</h1>
+<Content/>
