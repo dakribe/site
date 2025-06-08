@@ -1,12 +1,15 @@
 ---
+import IndexLayout from "./layouts/IndexLayout.astro"
 import { getCollection } from "astro:content"
 
 const posts = await getCollection('blog')
 ---
 
-<h1>My posts</h1>
-<ul>
-  {posts.map(post => (
-  <a href={`/posts/${post.id}`}><li>{post.data.title}</li></a>
-  ))}
-</ul>
+<IndexLayout>
+  <h1>My posts</h1>
+  <ul>
+    {posts.map(post => (
+      <a href={`/posts/${post.id}`}><li>{post.data.title}</li></a>
+    ))}
+  </ul>
+</IndexLayout>
