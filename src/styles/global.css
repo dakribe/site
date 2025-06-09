@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+body {
+  @apply max-w-3xl mx-auto font-mono;
+}

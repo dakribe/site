@@ -5,3 +5,9 @@ date: 2025-06-08
 ---
 
 # My first post
+
+```go
+func main() {
+    fmt.println("Hello World")
+}
+```

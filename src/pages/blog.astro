@@ -4,7 +4,7 @@ import { getCollection } from "astro:content"
 
 const posts = await getCollection('blog')
 ---
-<IndexLayout>
+<IndexLayout title="Blog">
   <h1>My posts</h1>
   <ul>
     {posts.map(post => (
