@@ -1,23 +1,33 @@
 ---
-import { getCollection, render } from 'astro:content';
-import BlogLayout from '../layouts/BlogLayout.astro';
+import { getCollection, render } from "astro:content";
+import BlogLayout from "../layouts/BlogLayout.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog")
-  return posts.map(post => ({
-    params: { id: post.id   },
-    props: { post }
-  }))
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
 }
 
-const { post } = Astro.props
-const { Content } = await render(post)
+const { post } = Astro.props;
+const formattedDate = post.data.publishedDate.toLocaleDateString("en-us", {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+});
 
+const { Content } = await render(post);
 ---
 
 <BlogLayout title={post.data.title}>
-  <h1>{post.data.title}</h1>
-  <article class="prose">
-    <Content/>
-  </article>
-</BlogLayout>
+  <div class="prose">
+    <p>{formattedDate}</p>
+    <h1>{post.data.title}</h1>
+  </div>
+  <div>
+    <article class="prose">
+      <Content />
+    </article>
+  </div></BlogLayout
+>

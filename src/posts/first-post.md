@@ -1,10 +1,15 @@
 ---
-title: My firtst post
+title: My first post
 slug: my-first-post
-date: 2025-06-08
+publishedDate: 2025-06-08
 ---
 
-# My first post
+test
+
+- Hello
+- Hello
+- Hello
+- Hello
 
 ```go
 func main() {
