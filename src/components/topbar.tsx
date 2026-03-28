@@ -7,7 +7,7 @@ export function Topbar() {
         <div class="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
       </div>
       <div class="flex-1 text-center text-muted text-[11px] tracking-wide">
-        bash — ~/me — 120×38
+        fish — ~/me — 120×38
       </div>
       <div class="w-14" />
     </div>

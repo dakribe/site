@@ -18,7 +18,7 @@ function Sep() {
 
 export function StatusBar(props: Props) {
   return (
-    <div class="flex items-center gap-3.5 px-3.5 py-1 bg-bg2 border-t border-border shrink-0 text-[11px] text-dim">
+    <div class="fixed bottom-0 left-0 right-0 flex items-center gap-3.5 px-3.5 py-1 bg-bg2 border-t border-border shrink-0 text-[11px] text-dim z-50">
       <span class="flex items-center gap-1">
         <Kbd>↑</Kbd>
         <Kbd>↓</Kbd> navigate
