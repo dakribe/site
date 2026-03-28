@@ -1,62 +1,18 @@
 @import "tailwindcss";
 
-@theme {
-  --font-mono: "JetBrains Mono", monospace;
-
-  --color-bg: #0d0f11;
-  --color-bg2: #141618;
-  --color-bg3: #1a1d20;
-  --color-border: #2a2d31;
-  --color-dim: #4a5568;
-  --color-muted: #718096;
-  --color-text: #cdd6f4;
-  --color-cyan: #89dceb;
-  --color-green: #a6e3a1;
-  --color-yellow: #f9e2af;
-  --color-blue: #89b4fa;
-  --color-magenta: #cba6f7;
-  --color-orange: #fab387;
-  --color-sel: #1e2030;
-  --color-sel-hl: #313244;
+:root {
+  --background-rgb: 214, 219, 220;
+  --foreground-rgb: 0, 0, 0;
 }
 
-html,
-body,
-#root {
-  height: 100%;
-  overflow: hidden;
-  background: var(--color-bg);
-  color: var(--color-text);
-  font-family: var(--font-mono);
-  font-size: 13px;
-  line-height: 1.5;
-}
-
-/* scanlines */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: repeating-linear-gradient(
-    to bottom,
-    transparent 0px,
-    transparent 2px,
-    rgba(0, 0, 0, 0.06) 2px,
-    rgba(0, 0, 0, 0.06) 4px
-  );
-  pointer-events: none;
-  z-index: 9999;
-}
-
-mark {
-  background: transparent;
-  color: var(--color-yellow);
-  font-weight: 700;
-}
-
-/* mobile fallback */
-@media (max-width: 768px) {
-  #root {
-    overflow: auto;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-rgb: 0, 0, 0;
+    --foreground-rgb: 255, 255, 255;
   }
+}
+
+body {
+  background: rgb(var(--background-rgb));
+  color: rgb(var(--foreground-rgb));
 }
