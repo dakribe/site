@@ -1,6 +1,6 @@
 import { For, Show } from "solid-js";
 import { segmentLabel } from "~/lib/fuzzy";
-import { Item, TAG_CLASS } from "~/lib/item";
+import { Item, TAG_STYLE } from "~/lib/item";
 
 interface Props {
   items: Item[];
@@ -35,7 +35,6 @@ export function Results(props: Props) {
             const indices = () => props.matchData.get(item.id) ?? [];
             const segments = () => segmentLabel(item.label, indices());
             const active = () => i() === props.activeIdx;
-            const tc = TAG_CLASS[item.tag];
 
             return (
               <div
@@ -51,7 +50,11 @@ export function Results(props: Props) {
                   ▌
                 </span>
                 <span
-                  class={`text-[10px] px-1 py-px rounded-sm font-medium shrink-0 tracking-wide ${tc.badge}`}
+                  class={`text-[10px] px-1 py-px rounded-sm font-medium shrink-0 tracking-wide`}
+                  style={{
+                    color: TAG_STYLE[item.tag].color,
+                    background: TAG_STYLE[item.tag].bg,
+                  }}
                 >
                   {item.tag}
                 </span>

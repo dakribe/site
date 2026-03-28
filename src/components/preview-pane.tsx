@@ -1,5 +1,5 @@
 import { Show, For } from "solid-js";
-import { Item, TAG_CLASS } from "~/lib/item";
+import { Item, TAG_STYLE } from "~/lib/item";
 
 interface Props {
   item: Item | undefined;
@@ -23,12 +23,15 @@ export function PreviewPane(props: Props) {
         }
       >
         {(item) => {
-          const tc = TAG_CLASS[item().tag];
           return (
             <>
               <div class="flex items-center gap-2.5 border-b border-border pb-2.5">
                 <span
-                  class={`text-[11px] px-2 py-px rounded-sm font-semibold tracking-wider uppercase ${tc.badge}`}
+                  class={`text-[11px] px-2 py-px rounded-sm font-semibold tracking-wider uppercase `}
+                  style={{
+                    color: TAG_STYLE[item().tag].color,
+                    background: TAG_STYLE[item().tag].bg,
+                  }}
                 >
                   {item().tag}
                 </span>
