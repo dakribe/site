@@ -39,7 +39,7 @@ export function Results(props: Props) {
             return (
               <div
                 data-active={active()}
-                class={`flex items-baseline gap-2 px-3 py-[3px] cursor-pointer select-none
+                class={`flex items-baseline gap-2 px-3 py-[3px] select-none
                   ${active() ? "bg-sel-hl" : "hover:bg-sel"}`}
                 onMouseEnter={() => props.onHover(i())}
                 onClick={() => props.onClick(i())}
