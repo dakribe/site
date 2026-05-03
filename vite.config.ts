@@ -1,3 +1,4 @@
+import contentCollections from "@content-collections/vite";
 import { defineConfig } from 'vite'
 import { devtools } from '@tanstack/devtools-vite'
 
@@ -15,6 +16,7 @@ const config = defineConfig({
     tailwindcss(),
     tanstackStart(),
     viteReact(),
+    contentCollections()
   ],
 })
 
