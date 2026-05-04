@@ -7,23 +7,23 @@ import { z } from "zod";
 
 const posts = defineCollection({
   name: "posts",
-  directory: "content/posts",
+  directory: "./src/posts/",
   include: "*.md",
   schema: z.object({
     title: z.string(),
-    summary: z.string(),
     date: z.coerce.date(),
-    author: z.string(),
+    content: z.string(),
   }),
   transform: async (document, context) => {
     const html = await compileMarkdown(context, document);
     return {
       ...document,
+      id: document._meta.path,
       html,
     };
   },
 });
 
 export default defineConfig({
-  collections: [posts],
+  content: [posts],
 });

@@ -1,14 +1,24 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { allPosts } from "content-collections";
 
-export const Route = createFileRoute('/')({ component: Home })
+export const Route = createFileRoute("/")({
+  component: Home,
+  loader: () => allPosts,
+});
 
 function Home() {
+  const posts = Route.useLoaderData();
+
   return (
-    <div className="p-8">
-      <h1 className="text-4xl font-bold">Welcome to TanStack Start</h1>
-      <p className="mt-4 text-lg">
-        Edit <code>src/routes/index.tsx</code> to get started.
-      </p>
+    <div>
+      {posts.map((post) => (
+        <Link to="/post/$id" params={{ id: post.id }} key={post.title}>
+          <div>
+            <p>{post.title}</p>
+            <p>{post.date.toDateString()}</p>
+          </div>
+        </Link>
+      ))}
     </div>
-  )
+  );
 }
