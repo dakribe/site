@@ -1,16 +1,68 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-* {
-  box-sizing: border-box;
+@theme {
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* thorn-dark-cold */
+  --color-bg: #1d282f;
+  --color-bg2: #152128;
+  --color-bg3: #1a2c37;
+  --color-border: #1a2c37;
+  --color-dim: #314654;
+  --color-muted: #91a4ad;
+  --color-text: #dbd0c6;
+  --color-cyan: #79c2b6;
+  --color-green: #9ebb9c;
+  --color-yellow: #ffd7aa;
+  --color-blue: #86bfd0;
+  --color-magenta: #d9add4;
+  --color-orange: #f9ada0;
+  --color-red: #d2696c;
+  --color-sel: #21313b;
+  --color-sel-hl: #223b49;
 }
 
 html,
 body,
-#app {
-  min-height: 100%;
+#root {
+  height: 100%;
+  overflow: hidden;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.5;
 }
 
-body {
-  margin: 0;
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 2px,
+    rgba(0, 0, 0, 0.08) 2px,
+    rgba(0, 0, 0, 0.08) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+mark {
+  background: transparent;
+  color: var(--color-yellow);
+  font-weight: 700;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 2px;
 }

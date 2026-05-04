@@ -19,7 +19,7 @@ function RouteComponent() {
   const post = Route.useLoaderData();
   return (
     <div>
-      <div className="prose">
+      <div className="prose prose-invert">
         <div>
           <h1>{post.title}</h1>
           <p>{post.date.toDateString()}</p>
