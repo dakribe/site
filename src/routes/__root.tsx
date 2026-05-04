@@ -3,7 +3,6 @@ import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import { TanStackDevtools } from "@tanstack/react-devtools";
 
 import appCss from "../styles.css?url";
-import { Header } from "#/components/header";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -23,6 +22,10 @@ export const Route = createRootRoute({
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      {
+        rel: "icon",
+        href: "https://fav.farm/%F0%9F%8D%80",
       },
     ],
   }),
