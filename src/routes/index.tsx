@@ -19,7 +19,7 @@ interface FilteredResult {
 
 function Home() {
   const [query, setQuery] = useState("");
-  const [activeIdx, setActiveIdx] = useState(ITEMS.length - 1);
+  const [activeIdx, setActiveIdx] = useState(0);
 
   const inputRef = useRef<HTMLInputElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
